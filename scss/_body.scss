@@ -6,6 +6,7 @@
 
 html {
     font-size: 16px;
+    font-family: 'Bebas Neue', cursive;
 }
 
 body {
@@ -20,4 +21,14 @@ body {
     align-items: center;
     display: flex;
     justify-content: center;
+}
+
+.flex__mid {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.layout {
+    margin: 0.3rem;
 }

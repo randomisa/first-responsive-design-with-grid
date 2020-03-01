@@ -1,5 +1,159 @@
 .container2 {
-    background-color: #126977;
-    height: 100vh;
+    background-color: #001725;
+    height: 140vh;
     width: 100vw;
+
+    @include md {
+        height: 120vh;
+    }
+
+    @include lg {
+        height: 100vh;
+    }
+
+    .grid {
+        display: grid;
+        height: 80%;
+        width: 80%;
+
+
+        grid-template-areas:
+        "header header"
+        "main-box main-box"
+        "main-box main-box"
+        "side-box1 side-box2"
+        "side-box3 side-box4"
+        "mid-box1 mid-box1"
+        "mid-box2 mid-box2"
+        "box1 box2"
+        "box3 box4"
+        "box5 box6"
+        "mid-box3 mid-box3"
+        "mid-box4 mid-box4"
+        "footer footer";
+    
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 8% repeat(11, calc(84% / 11)) 8%;
+
+        @include md {
+            grid-template-areas:
+            "header header"
+            "main-box main-box"
+            "main-box main-box"
+            "side-box1 side-box2"
+            "side-box3 side-box4"
+            "mid-box1 mid-box2"
+            "box1 box2"
+            "box3 box4"
+            "box5 box6"
+            "mid-box3 mid-box4"
+            "footer footer";
+        
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 8% repeat(9, calc(84% / 9)) 8%;
+        }
+
+        @include lg {
+            grid-template-areas:
+            "header header header header header header"
+            "main-box main-box main-box main-box side-box1 side-box2"
+            "main-box main-box main-box main-box side-box3 side-box4"
+            "mid-box1 mid-box1 mid-box1 mid-box2 mid-box2 mid-box2"
+            "box1 box1 box2 box2 box3 box3"
+            "box4 box4 box5 box5 box6 box6"
+            "mid-box3 mid-box3 mid-box3 mid-box4 mid-box4 mid-box4"
+            "footer footer footer footer footer footer";
+    
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 8% repeat(6, calc(84% / 6)) 8%;
+
+        }
+
+        .header {
+            background: rgb(255, 91, 214);
+            grid-area: header;
+        }
+    
+        .main-box {
+            background: rgb(153, 0, 255);
+            grid-area: main-box;
+        }
+    
+        .side-box1 {
+            background: rgb(0, 153, 255);
+            grid-area: side-box1;
+        }
+    
+        .side-box2 {
+            background:  rgb(0, 153, 255);
+            grid-area: side-box2;
+        }
+    
+        .side-box3 {
+            background:  rgb(0, 153, 255);
+            grid-area: side-box3;
+        }
+    
+        .side-box4 {
+            background:  rgb(0, 153, 255);
+            grid-area: side-box4;
+        }
+    
+        .box1 {
+            background: rgb(46, 161, 255);
+            grid-area: box1;
+        }
+    
+        .box2 {
+            background: rgb(46, 161, 255);
+            grid-area: box2;
+        }
+    
+        .box3 {
+            background: rgb(46, 161, 255);
+            grid-area: box3;
+        }
+    
+        .box4 {
+            background: rgb(46, 161, 255);
+            grid-area: box4;
+        }
+    
+        .box5 {
+            background: rgb(46, 161, 255);
+            grid-area: box5;
+        }
+        
+        .box6 {
+            background: rgb(46, 161, 255);
+            grid-area: box6;
+        }
+    
+        .mid-box1 {
+            background: rgb(115, 99, 255);
+            grid-area: mid-box1;
+        }
+        
+        .mid-box2 {
+            background: rgb(115, 99, 255);
+            grid-area: mid-box2;
+        }
+    
+        .mid-box3 {
+            background: rgb(115, 99, 255);
+            grid-area: mid-box3;
+        }
+    
+        .mid-box4 {
+            background: rgb(115, 99, 255);
+            grid-area: mid-box4;
+        }
+    
+        .footer {
+            background: rgb(255, 91, 214);
+            grid-area: footer;
+        }
+    
+
+    }
 }
