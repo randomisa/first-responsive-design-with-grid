@@ -1,3 +1,39 @@
 .container1 {
     background-color: #193539;
+    height: 160vh;
+    width: 100vw;
+
+    @include sm {
+        height: 120vh;
+    }
+
+    @include lg {
+        height: 100vh;
+    }
+
+    .grid {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        height: 80%;
+        width: 80%;
+
+    @include sm {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    @include lg {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+        .grid-item {
+            align-items: center;
+            background-color: wheat;
+            display: flex;
+            justify-content: center;
+        }
+    }
 }
